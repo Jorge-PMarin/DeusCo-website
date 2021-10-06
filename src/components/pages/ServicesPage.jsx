@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import styled from 'styled-components';
 import Button from '../Button';
 import Card from '../Card';
-import woman from '../../assets/images/woman.png';
 import Icon from '../../assets/images/play.png';
 import ServicesVideo from '../../assets/videos/services.mp4';
 
@@ -55,23 +53,14 @@ const ClippedShape = styled.div`
   width: 100%;
   height: 100%;
   clip-path: polygon(0 0, 72% 0, 72% 100%, 0% 100%);
-  background-color: crimson;
+  background-color: #f87b90;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: -1;
 `;
 
-const Img = styled.img`
-  display: ${({ isOpen }) => (isOpen ? 'none' : 'block')};
-  width: 80%;
-  position: absolute;
-  bottom: 0;
-  left: 20%;
-`;
-
 const Video = styled.video`
-  display: ${({ isOpen }) => (isOpen ? 'block' : 'none')};
   width: 85%;
   position: absolute;
   top: 0;
@@ -83,13 +72,10 @@ const Video = styled.video`
 `;
 
 const ServicesPage = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
   return (
     <Container>
       <Left>
-        <Img src={woman} alt='woman' isOpen={isOpen} />
-        <Video isOpen={isOpen} autoPlay loop controls src={ServicesVideo} />
+        <Video autoPlay loop controls src={ServicesVideo} />
         <ClippedShape />
       </Left>
       <Right>
@@ -116,7 +102,7 @@ const ServicesPage = () => {
               exercitationem quisquam tempore, dignissimos voluptates soluta.
             </Card>
           </CardContainer>
-          <Button onClick={() => setIsOpen(!isOpen)}>
+          <Button>
             <PlayIcon src={Icon} alt='play icon' />
             how it works
           </Button>
