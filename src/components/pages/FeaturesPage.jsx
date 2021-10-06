@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import cellphone from '../../assets/images/hand_phone.png';
 import AnimatedShapes from '../Animations/AnimatedShapes';
+import Button from '../Button';
 
 const Container = styled.div`
   height: 100vh;
@@ -52,16 +53,6 @@ const Description = styled.div`
   p:last-child {
     margin-bottom: 3rem;
   }
-`;
-
-const Button = styled.button`
-  padding: 1.5rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
-  background-color: darkblue;
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
 `;
 
 const ClippedShape = styled.div`

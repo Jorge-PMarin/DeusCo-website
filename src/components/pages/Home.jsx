@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import woman from '../../assets/images/woman.png';
 import AnimatedShapes from '../Animations/AnimatedShapes';
 import Navbar from '../Navbar/Navbar';
+import Button from '../Button';
 
 const Container = styled.div`
   height: calc(100vh - 6rem);
@@ -46,16 +47,6 @@ const Contact = styled.div`
   justify-content: space-between;
 `;
 
-const ContactBtn = styled.button`
-  padding: 1.5rem 1rem;
-  border-radius: 0.5rem;
-  border: none;
-  background-color: darkblue;
-  color: #fff;
-  text-transform: uppercase;
-  cursor: pointer;
-`;
-
 const ContactInfo = styled.div`
   p:first-child {
     text-transform: capitalize;
@@ -64,7 +55,7 @@ const ContactInfo = styled.div`
   }
 
   p:last-child {
-    color: #beb8b8;
+    color: #999;
   }
 `;
 
@@ -92,7 +83,7 @@ const Home = () => (
             aspernatur quidem quas iure.
           </Text>
           <Contact>
-            <ContactBtn>start a project</ContactBtn>
+            <Button>start a project</Button>
             <ContactInfo>
               <p>call us (012) 345 6789</p>
               <p>For any questions or concern</p>

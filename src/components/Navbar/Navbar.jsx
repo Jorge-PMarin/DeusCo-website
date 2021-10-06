@@ -7,7 +7,6 @@ const Nav = styled.div`
   font-size: 1.8rem;
   padding: 0 1rem;
   height: 6rem;
-  background-color: #ffffff0;
 `;
 
 const Logo = styled.div`
