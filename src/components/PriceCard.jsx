@@ -11,17 +11,31 @@ const StyledPriceCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (max-width: 48rem) {
+    width: 100%;
+    padding: 0rem;
+  }
 `;
 
 const PriceContainer = styled.div`
   margin-bottom: 2rem;
   display: flex;
   align-items: center;
+
+  @media (max-width: 48rem) {
+    margin-bottom: 1rem;
+
+  }
 `;
 
 const Price = styled.span`
   font-size: 4rem;
   font-weight: bold;
+
+  @media (max-width: 48rem) {
+    font-size: 2.5rem;
+  }
 `;
 
 const Plan = styled.h3`
@@ -31,19 +45,46 @@ const Plan = styled.h3`
   border-radius: 10rem;
   background-color: #fff;
   margin-bottom: 2.5em;
+
+  @media (max-width: 48rem) {
+    display: none;
+  }
 `;
 
 const Features = styled.ul`
-
   li {
     margin-bottom: 3rem;
-    list-style-type: circle;
   }
 
   li:last-child {
     margin-bottom: 4rem;
   }
 
+  @media (max-width: 48rem) {
+    width: 100%;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    li {
+      margin-bottom: 1rem;
+    }
+
+    li:last-child {
+      margin-bottom: 1.5rem;
+    }
+  }
+`;
+
+const StyledButton = styled(Button)`
+  
+
+  @media (max-width: 48rem) {
+    font-size: 1rem;
+    padding: .7rem;
+    margin-bottom: .5rem
+  }
 `;
 
 const PriceCard = ({ plan, price }) => (
@@ -58,7 +99,7 @@ const PriceCard = ({ plan, price }) => (
       <li>200 hand-crafted templates</li>
       <li>200 hand-crafted templates</li>
     </Features>
-    <Button>join now</Button>
+    <StyledButton>join now</StyledButton>
   </StyledPriceCard>
 );
 

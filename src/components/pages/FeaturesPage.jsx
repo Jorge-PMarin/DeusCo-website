@@ -18,12 +18,18 @@ const Left = styled.div`
     position: absolute;
     bottom: 0;
   }
+
+  //small devices
+  @media (max-width: 48rem) {
+    display: none;
+  }
 `;
 
 const Right = styled.div`
-  width: 50%;
+  width: 100%;
   display: flex;
   align-items: center;
+  padding: 3rem;
 `;
 
 const Wrapper = styled.div`
@@ -34,6 +40,10 @@ const Title = styled.h1`
   font-size: 6rem;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
+
+  @media (max-width: 48rem) {
+    font-size: 4rem;
+  }
 `;
 
 const Subtitle = styled.h2`

@@ -7,18 +7,27 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
+
 `;
 
 const Wrapper = styled.div`
   width: 70%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 48rem) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 50%;
+    height: 90%;
+  }
 `;
 
 const ClippedShape = styled.div`
   width: 100%;
   height: 100%;
-  clip-path: polygon(37% 0, 100% 0, 100% 100%, 65% 100%);
+  clip-path: polygon(36% 0, 100% 0, 100% 100%, 65% 100%);
   background-color: crimson;
   position: absolute;
   z-index: -1;

@@ -4,30 +4,39 @@ import { FaChessKnight } from 'react-icons/fa';
 const Nav = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 1.8rem;
   padding: 0 1rem;
   height: 6rem;
+
+  @media (min-width: 857px) {
+    justify-content: flex-start;
+  }
+
 `;
 
 const Logo = styled.div`
-  width: 20%;
+  min-width: 13rem;
   font-size: 2.3rem;
   font-weight: 700;
   text-decoration: underline crimson;
 `;
 
 const Menu = styled.div`
-  width: 40%;
   height: 100%;
-  display: flex;
+  display: none;
   align-items: center;
+
+  @media (min-width: 857px) {
+    display: flex;
+  }
 `;
 
 const MenuLink = styled.li`
   text-transform: capitalize;
   color: #616060;
   cursor: pointer;
-  width: 100%;
+  width: 8rem;
   height: 100%;
   display: flex;
   align-items: center;

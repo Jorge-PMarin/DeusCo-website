@@ -7,10 +7,14 @@ import ServicesVideo from '../../assets/videos/services.mp4';
 const Container = styled.section`
   height: 100vh;
   display: flex;
+  position: relative;
 `;
 const Left = styled.div`
   width: 50%;
-  position: relative;
+
+  @media (max-width: 48rem) {
+    display: none;
+  }
 `;
 
 const Right = styled.div`
@@ -18,16 +22,28 @@ const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
 `;
 
 const Wrapper = styled.div`
   width: 80%;
+
+  @media (max-width: 48rem) {
+    width: 90%;
+  }
 `;
 
 const Title = styled.h2`
   font-size: 3.3rem;
   margin-bottom: 2rem;
   text-transform: capitalize;
+
+  @media (max-width: 48rem) {
+    font-size: 3.5rem;
+  }
 `;
 
 const Description = styled.p`
@@ -52,12 +68,16 @@ const PlayIcon = styled.img`
 const ClippedShape = styled.div`
   width: 100%;
   height: 100%;
-  clip-path: polygon(0 0, 72% 0, 72% 100%, 0% 100%);
+  clip-path: polygon(0 0, 36% 0, 36% 100%, 0% 100%);
   background-color: #f87b90;
   position: absolute;
   left: 0;
   bottom: 0;
   z-index: -1;
+
+  @media {
+    display: none;
+  }
 `;
 
 const Video = styled.video`
@@ -76,7 +96,6 @@ const ServicesPage = () => {
     <Container>
       <Left>
         <Video autoPlay loop controls src={ServicesVideo} />
-        <ClippedShape />
       </Left>
       <Right>
         <Wrapper>
@@ -90,16 +109,13 @@ const ServicesPage = () => {
           </Description>
           <CardContainer>
             <Card>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
-              exercitationem quisquam tempore, dignissimos voluptates soluta.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </Card>
             <Card>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
-              exercitationem quisquam tempore, dignissimos voluptates soluta.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </Card>
             <Card>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem
-              exercitationem quisquam tempore, dignissimos voluptates soluta.
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </Card>
           </CardContainer>
           <Button>
@@ -108,6 +124,7 @@ const ServicesPage = () => {
           </Button>
         </Wrapper>
       </Right>
+      <ClippedShape />
     </Container>
   );
 };

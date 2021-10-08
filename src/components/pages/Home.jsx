@@ -15,6 +15,11 @@ const Left = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  //small devices
+  @media (max-width: 48rem) {
+    width: 100%;
+  }
 `;
 
 const Right = styled.div`
@@ -26,16 +31,36 @@ const Right = styled.div`
     position: absolute;
     bottom: 0;
   }
+
+  //small devices
+  @media (max-width: 48rem) {
+    display: none;
+  }
 `;
 
 const TextContent = styled.main`
   width: 60%;
+
+  //small devices
+  @media (max-width: 48rem) {
+    max-width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+  }
 `;
 
 const Title = styled.h1`
   font-size: 5rem;
   text-transform: capitalize;
   padding-bottom: 2rem;
+
+  //small devices
+  @media (max-width: 48rem) {
+    font-size: 4rem;
+  }
 `;
 
 const Text = styled.p`
@@ -45,6 +70,13 @@ const Text = styled.p`
 const Contact = styled.div`
   display: flex;
   justify-content: space-between;
+  
+   //small devices
+   @media (max-width: 48rem) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const ContactInfo = styled.div`
@@ -56,6 +88,13 @@ const ContactInfo = styled.div`
 
   p:last-child {
     color: #999;
+  }
+`;
+
+const StyledButton = styled(Button)`
+   //small devices
+   @media (max-width: 48rem) {
+    margin-bottom: 2rem;
   }
 `;
 
@@ -83,7 +122,7 @@ const Home = () => (
             aspernatur quidem quas iure.
           </Text>
           <Contact>
-            <Button>start a project</Button>
+            <StyledButton>start a project</StyledButton>
             <ContactInfo>
               <p>call us (012) 345 6789</p>
               <p>For any questions or concern</p>
