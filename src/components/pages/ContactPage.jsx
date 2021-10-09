@@ -16,6 +16,10 @@ const Wrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
 `;
 
 const FormContainer = styled.div`
@@ -26,12 +30,26 @@ const FormContainer = styled.div`
     margin-bottom: 4rem;
     text-transform: capitalize;
   }
+
+  @media (max-width: 480px) {
+    width: 100%;
+
+    h2 {
+      font-size: 3rem;
+      margin: 1em 0 .5em 0;
+    }
+  }
+
 `;
 
 const Form = styled.form`
   width: 100%;
   display: flex;
   justify-content: space-between;
+
+  @media (max-width: 840px) {
+    display: block;
+  }
 `;
 
 const FormGroupLeft = styled.div`
@@ -50,11 +68,20 @@ const FormGroupLeft = styled.div`
   input + input {
     margin-top: 3rem;
   }
+
+  @media (max-width: 840px) {
+    width: auto;
+    margin-right: auto;
+    
+    input {
+      padding: 1rem;
+
+    }
+  }
 `;
 
 const FormGroupRight = styled.div`
   width: 50%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -65,6 +92,11 @@ const FormGroupRight = styled.div`
     padding: 2rem;
     font-family: inherit;
     border-radius: 0.5rem;
+  }
+
+  @media (max-width: 840px) {
+    width: auto;
+    margin-top: 3rem;
   }
 `;
 
@@ -77,19 +109,35 @@ const InfoContainer = styled.div`
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  @media (max-width: 480px) {
+    width: 100%;
+    margin-top: 1em;
+  }
 `;
 
 const InfoItem = styled.div`
   display: flex;
   align-items: center;
-  margin: 1rem;
+  margin: 0.5em;
   width: 60%;
   margin-left: auto;
+
+  @media (max-width: 840px) {
+    width: 80%;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+  }
 `;
 
 const InfoIcon = styled.img`
   width: 2.5rem;
+
+  @media (max-width: 480px) {
+    width: 1.7rem;
+  }
 `;
 
 const InfoText = styled.p`
@@ -126,7 +174,6 @@ const ContactPage = () => {
           </InfoItem>
           <InfoItem>
             <InfoIcon src={PhoneIcon} />
-            <InfoText>+1 631 1234 5678</InfoText>
             <InfoText>+1 631 1234 5678</InfoText>
           </InfoItem>
           <InfoItem>

@@ -10,15 +10,21 @@ const Container = styled.section`
 `;
 
 const Wrapper = styled.div`
-  width: 70%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: 48rem) {
+  @media (max-width: 840px) {
+    width: 95%;
+  }
+
+  @media (max-width: 600px) {
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    width: 50%;
+
+    div + div {
+      margin-top: 1rem;
+    }
   }
 `;
 

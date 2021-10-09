@@ -9,6 +9,11 @@ const Container = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 2rem;
+
+  @media (max-width: 480px) {
+    font-size: 1.3rem;
+    padding: 0;
+  }
 `;
 
 const List = styled.ul`
@@ -19,15 +24,23 @@ const ListItem = styled.li`
   margin-left: 2rem;
   text-transform: capitalize;
   cursor: pointer;
+
+  @media (max-width: 480px) {
+    margin-left: 0.6em;
+  }
 `;
 
 const Copyright = styled.span`
-display: flex;
-align-items: center;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 480px) {
+    margin-right: 0.6em;
+  }
 `;
 
 const CopyrightIcon = styled(AiOutlineCopyrightCircle)`
-margin-left: 1rem;
+  margin-left: 1rem;
 `;
 
 const Footer = () => (

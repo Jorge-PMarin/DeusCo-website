@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { useState } from 'react';
 import Button from '../Button';
 import Card from '../Card';
 import Icon from '../../assets/images/play.png';
@@ -10,9 +11,12 @@ const Container = styled.section`
   display: flex;
   position: relative;
 `;
+
 const Left = styled.div`
   width: 40%;
-  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 
   @media (max-width: 840px) {
     display: none;
@@ -32,6 +36,16 @@ const Right = styled.div`
 
 const Wrapper = styled.div`
   width: 80%;
+  margin: 0 auto;
+
+  @media (max-width: 480px) {
+    height: 80%;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
 `;
 
 const Title = styled.h2`
@@ -76,16 +90,48 @@ const ClippedShape = styled.div`
 
 const Video = styled.video`
   width: 80%;
+  border-radius: 0.5rem;
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
+`;
+
+const Modal = styled.div`
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
   position: absolute;
   top: 0;
-  bottom: 0;
-  right: 0;
-  margin: auto;
-  border: none;
-  border-radius: 0.5rem;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1;
+`;
+
+const CloseButton = styled.span`
+  color: #d1cfcf;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top:1rem;
+  right: 2rem;
+  cursor: pointer;
 `;
 
 const ServicesPage = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleClick = () => {
+    if (window.screen.width <= 840) {
+      setIsOpen(true);
+    } else {
+      return;
+    }
+  };
+
   return (
     <Container>
       <Left>
@@ -112,7 +158,7 @@ const ServicesPage = () => {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             </Card>
           </CardContainer>
-          <Button>
+          <Button onClick={handleClick}>
             <PlayIcon src={Icon} alt='play icon' />
             how it works
           </Button>
@@ -120,6 +166,12 @@ const ServicesPage = () => {
       </Right>
       <ClippedShape />
       <AnimatedShapes />
+      {isOpen && (
+        <Modal>
+          <Video autoPlay loop controls src={ServicesVideo} />
+          <CloseButton onClick={() => setIsOpen(!isOpen)}>&times;</CloseButton>
+        </Modal>
+      )}
     </Container>
   );
 };

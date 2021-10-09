@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import Button from './Button';
 
 const StyledPriceCard = styled.div`
-  width: 30%;
+  width: 31%;
   background-color: #fff;
   -webkit-box-shadow: 5px 5px 19px 0px #000000;
   box-shadow: 5px 5px 19px 0px #000000;
@@ -12,20 +12,24 @@ const StyledPriceCard = styled.div`
   flex-direction: column;
   align-items: center;
 
-  @media (max-width: 48rem) {
-    width: 100%;
-    padding: 0rem;
+  @media (max-width: 840px) {
+    width: 32%;
+  }
+
+  @media (max-width: 600px) {
+    width: auto;
+    padding: 1em;
+    font-size: 1.3rem;
   }
 `;
 
 const PriceContainer = styled.div`
-  margin-bottom: 2rem;
+  margin-bottom: 1.5em;
   display: flex;
   align-items: center;
 
-  @media (max-width: 48rem) {
-    margin-bottom: 1rem;
-
+  @media (max-width: 600px) {
+    margin-bottom: 1em;
   }
 `;
 
@@ -33,57 +37,49 @@ const Price = styled.span`
   font-size: 4rem;
   font-weight: bold;
 
-  @media (max-width: 48rem) {
-    font-size: 2.5rem;
+  @media (max-width: 600px) {
+    font-size: 3rem;
   }
 `;
 
-const Plan = styled.h3`
+const Plan = styled.h4`
   border: 0.2rem solid crimson;
   padding: 1rem;
   color: crimson;
   border-radius: 10rem;
   background-color: #fff;
   margin-bottom: 2.5em;
+  text-align: center;
 
-  @media (max-width: 48rem) {
+  @media (max-width: 600px) {
     display: none;
   }
 `;
 
 const Features = styled.ul`
   li {
-    margin-bottom: 3rem;
+    margin-bottom: 2em;
   }
 
   li:last-child {
-    margin-bottom: 4rem;
+    margin-bottom: 2em;
   }
 
-  @media (max-width: 48rem) {
-    width: 100%;
-    font-size: 1.2rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-
+  @media (max-width: 600px) {
     li {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5em;
     }
 
     li:last-child {
-      margin-bottom: 1.5rem;
+      margin-bottom: 1em;
     }
   }
 `;
 
 const StyledButton = styled(Button)`
-  
-
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     font-size: 1rem;
-    padding: .7rem;
-    margin-bottom: .5rem
+    padding: 1em;
   }
 `;
 
