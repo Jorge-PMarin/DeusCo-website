@@ -16,8 +16,7 @@ const Left = styled.div`
   justify-content: center;
   align-items: center;
 
-  //small devices
-  @media (max-width: 48rem) {
+  @media (max-width: 840px) {
     width: 100%;
   }
 `;
@@ -32,8 +31,7 @@ const Right = styled.div`
     bottom: 0;
   }
 
-  //small devices
-  @media (max-width: 48rem) {
+  @media (max-width: 840px) {
     display: none;
   }
 `;
@@ -41,14 +39,8 @@ const Right = styled.div`
 const TextContent = styled.main`
   width: 60%;
 
-  //small devices
-  @media (max-width: 48rem) {
-    max-width: 90%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
+  @media (max-width: 600px) {
+    width: 80%;
   }
 `;
 
@@ -56,11 +48,6 @@ const Title = styled.h1`
   font-size: 5rem;
   text-transform: capitalize;
   padding-bottom: 2rem;
-
-  //small devices
-  @media (max-width: 48rem) {
-    font-size: 4rem;
-  }
 `;
 
 const Text = styled.p`
@@ -70,12 +57,10 @@ const Text = styled.p`
 const Contact = styled.div`
   display: flex;
   justify-content: space-between;
-  
-   //small devices
-   @media (max-width: 48rem) {
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  align-items: center;
+
+  @media (max-width: 600px) {
+    display: block;
   }
 `;
 
@@ -83,19 +68,21 @@ const ContactInfo = styled.div`
   p:first-child {
     text-transform: capitalize;
     font-weight: 700;
-    color: crimson;
+    color: #f15f7d;
   }
 
   p:last-child {
     color: #999;
   }
+
+  @media (max-width: 600px) {
+    margin-top: 2em;
+  }
 `;
 
 const StyledButton = styled(Button)`
-   //small devices
-   @media (max-width: 48rem) {
-    margin-bottom: 2rem;
-  }
+  min-width: 14.1rem;
+  margin-right: 1rem;
 `;
 
 export const ClippedShape = styled.div`

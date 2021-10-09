@@ -8,11 +8,6 @@ const Nav = styled.div`
   font-size: 1.8rem;
   padding: 0 1rem;
   height: 6rem;
-
-  @media (min-width: 857px) {
-    justify-content: flex-start;
-  }
-
 `;
 
 const Logo = styled.div`
@@ -24,11 +19,13 @@ const Logo = styled.div`
 
 const Menu = styled.div`
   height: 100%;
-  display: none;
+  min-width: 40rem;
+  display: flex;
+  justify-content: center;
   align-items: center;
 
-  @media (min-width: 857px) {
-    display: flex;
+  @media (max-width: 840px) {
+    display: none;
   }
 `;
 
@@ -36,12 +33,12 @@ const MenuLink = styled.li`
   text-transform: capitalize;
   color: #616060;
   cursor: pointer;
-  width: 8rem;
   height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   transition: all 0.3s ease-in-out;
+  flex-grow: 1;
 
   &:hover {
     background-color: crimson;

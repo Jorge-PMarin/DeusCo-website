@@ -9,11 +9,10 @@ const Card = styled.div`
   padding: 2rem;
   text-align: center;
 
-  @media (max-width: 48rem) {
+  @media (max-width: 480px) {
     padding: 2rem 1rem;
     font-size: 1.2rem;
   }
-
 `;
 
 export default Card;

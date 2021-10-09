@@ -7,7 +7,6 @@ const Container = styled.section`
   justify-content: center;
   align-items: center;
   position: relative;
-
 `;
 
 const Wrapper = styled.div`
@@ -18,9 +17,8 @@ const Wrapper = styled.div`
   @media (max-width: 48rem) {
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     width: 50%;
-    height: 90%;
   }
 `;
 
@@ -40,7 +38,7 @@ const PricesPage = () => (
       <PriceCard plan='Premium Plan' price='20' />
       <PriceCard plan='Basic Plan' price='10' />
     </Wrapper>
-    <ClippedShape/>
+    <ClippedShape />
   </Container>
 );
 

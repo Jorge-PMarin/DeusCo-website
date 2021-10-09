@@ -3,6 +3,7 @@ import Button from '../Button';
 import Card from '../Card';
 import Icon from '../../assets/images/play.png';
 import ServicesVideo from '../../assets/videos/services.mp4';
+import AnimatedShapes from '../Animations/AnimatedShapes';
 
 const Container = styled.section`
   height: 100vh;
@@ -10,40 +11,33 @@ const Container = styled.section`
   position: relative;
 `;
 const Left = styled.div`
-  width: 50%;
+  width: 40%;
+  position: relative;
 
-  @media (max-width: 48rem) {
+  @media (max-width: 840px) {
     display: none;
   }
 `;
 
 const Right = styled.div`
-  width: 50%;
+  width: 60%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media (max-width: 48rem) {
+  @media (max-width: 840px) {
     width: 100%;
   }
 `;
 
 const Wrapper = styled.div`
   width: 80%;
-
-  @media (max-width: 48rem) {
-    width: 90%;
-  }
 `;
 
 const Title = styled.h2`
   font-size: 3.3rem;
   margin-bottom: 2rem;
   text-transform: capitalize;
-
-  @media (max-width: 48rem) {
-    font-size: 3.5rem;
-  }
 `;
 
 const Description = styled.p`
@@ -75,13 +69,13 @@ const ClippedShape = styled.div`
   bottom: 0;
   z-index: -1;
 
-  @media {
+  @media (max-width: 840px) {
     display: none;
   }
 `;
 
 const Video = styled.video`
-  width: 85%;
+  width: 80%;
   position: absolute;
   top: 0;
   bottom: 0;
@@ -125,6 +119,7 @@ const ServicesPage = () => {
         </Wrapper>
       </Right>
       <ClippedShape />
+      <AnimatedShapes />
     </Container>
   );
 };

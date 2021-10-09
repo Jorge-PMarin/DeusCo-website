@@ -80,7 +80,7 @@ const Features = styled.ul`
 const StyledButton = styled(Button)`
   
 
-  @media (max-width: 48rem) {
+  @media (max-width: 480px) {
     font-size: 1rem;
     padding: .7rem;
     margin-bottom: .5rem

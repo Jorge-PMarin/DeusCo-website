@@ -18,32 +18,43 @@ const Left = styled.div`
     position: absolute;
     bottom: 0;
   }
+  @media (max-width: 840px) {
+    img {
+      width: 100%;
+      bottom: 25%;
+      left: -15%;
+    }
+  }
 
-  //small devices
-  @media (max-width: 48rem) {
+  @media (max-width: 600px) {
     display: none;
   }
 `;
 
 const Right = styled.div`
-  width: 100%;
+  width: 50%;
   display: flex;
   align-items: center;
   padding: 3rem;
+
+  @media (max-width: 840px) {
+    width: 100%;
+  }
 `;
 
 const Wrapper = styled.div`
   max-width: 55.5rem;
+
+  @media (max-width: 840px) {
+    width: 90%;
+    margin: 0 auto;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 6rem;
   margin-bottom: 0.5rem;
   text-transform: capitalize;
-
-  @media (max-width: 48rem) {
-    font-size: 4rem;
-  }
 `;
 
 const Subtitle = styled.h2`
