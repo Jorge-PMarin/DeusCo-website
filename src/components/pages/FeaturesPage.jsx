@@ -3,7 +3,7 @@ import cellphone from '../../assets/images/hand_phone.png';
 import AnimatedShapes from '../Animations/AnimatedShapes';
 import Button from '../Button';
 
-const Container = styled.div`
+const Container = styled.section`
   height: 100vh;
   display: flex;
   position: relative;
@@ -88,7 +88,7 @@ const ClippedShape = styled.div`
 `;
 
 const FeaturesPage = () => (
-  <Container>
+  <Container id='page_features'>
     <Left>
       <img src={cellphone} alt='hand holding a phone' />
     </Left>

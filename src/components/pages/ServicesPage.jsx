@@ -116,7 +116,7 @@ const CloseButton = styled.span`
   font-size: 28px;
   font-weight: bold;
   position: absolute;
-  top:1rem;
+  top: 1rem;
   right: 2rem;
   cursor: pointer;
 `;
@@ -133,7 +133,7 @@ const ServicesPage = () => {
   };
 
   return (
-    <Container>
+    <Container id='page_services'>
       <Left>
         <Video autoPlay loop controls src={ServicesVideo} />
       </Left>

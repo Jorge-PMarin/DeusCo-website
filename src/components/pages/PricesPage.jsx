@@ -38,7 +38,7 @@ const ClippedShape = styled.div`
 `;
 
 const PricesPage = () => (
-  <Container>
+  <Container id='page_prices'>
     <Wrapper>
       <PriceCard plan='Advanced Plan' price='30' />
       <PriceCard plan='Premium Plan' price='20' />

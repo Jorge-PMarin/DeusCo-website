@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import woman from '../../assets/images/woman.png';
 import AnimatedShapes from '../Animations/AnimatedShapes';
-import Navbar from '../Navbar/Navbar';
+import Navbar from '../Navbar';
 import Button from '../Button';
 
-const Container = styled.div`
+const Container = styled.section`
   height: calc(100vh - 6rem);
   display: flex;
   position: relative;
@@ -99,7 +99,7 @@ export const ClippedShape = styled.div`
 const Home = () => (
   <>
     <Navbar />
-    <Container>
+    <Container id='page_home'>
       <Left>
         <TextContent>
           <Title>adventures in creative age</Title>

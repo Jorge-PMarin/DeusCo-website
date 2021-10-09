@@ -29,7 +29,7 @@ const Menu = styled.div`
   }
 `;
 
-const MenuLink = styled.li`
+const MenuLink = styled.a`
   text-transform: capitalize;
   color: #616060;
   cursor: pointer;
@@ -68,11 +68,10 @@ const Navbar = () => (
       Deus Co.
     </Logo>
     <Menu>
-      <MenuLink>home</MenuLink>
-      <MenuLink>features</MenuLink>
-      <MenuLink>services</MenuLink>
-      <MenuLink>prices</MenuLink>
-      <MenuLink>contact</MenuLink>
+      <MenuLink href='#page_features' >features</MenuLink>
+      <MenuLink href='#page_services'>services</MenuLink>
+      <MenuLink href='#page_prices'>prices</MenuLink>
+      <MenuLink href='#page_contact'>contact</MenuLink>
     </Menu>
     <Wrapper>
       <button>join today</button>

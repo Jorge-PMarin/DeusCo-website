@@ -146,7 +146,7 @@ const InfoText = styled.p`
 
 const ContactPage = () => {
   return (
-    <Container>
+    <Container id='page_contact'>
       <Wrapper>
         <FormContainer>
           <h2>
