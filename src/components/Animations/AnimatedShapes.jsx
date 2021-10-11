@@ -9,11 +9,11 @@ const Square = styled.div`
   top: -6rem;
   left: -6rem;
   z-index: -2;
-  animation: square 25s linear alternate infinite;
+  animation: square 2s linear alternate infinite;
 
   @keyframes square {
     to {
-      transform: translate(90vw, 90vh);
+      transform: translate(97vw, 90vh);
     }
   }
 `;
@@ -28,11 +28,11 @@ const Circle = styled.div`
   top: 20rem;
   left: -10rem;
   z-index: -2;
-  animation: circle 25s linear alternate infinite;
+  animation: circle 2s linear alternate infinite;
 
   @keyframes circle {
     to {
-      transform: translate(100vw, -50vh);
+      transform: translate(99vw, 90vh);
     }
   }
 `;
@@ -46,11 +46,11 @@ const Rectangle = styled.div`
   top: 40rem;
   left: -30rem;
   z-index: -2;
-  animation: rectangle 25s linear alternate infinite;
+  animation: rectangle 2s linear alternate infinite;
 
   @keyframes rectangle {
     to {
-      transform: translate(100vw, -80vh);
+      transform: translate(117vw, -100vh);
     }
   }
 `;
