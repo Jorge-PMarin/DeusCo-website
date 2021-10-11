@@ -4,7 +4,7 @@ import AnimatedShapes from '../Animations/AnimatedShapes';
 import Button from '../Button';
 
 const Container = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   position: relative;
 `;
@@ -39,6 +39,10 @@ const Right = styled.div`
 
   @media (max-width: 840px) {
     width: 100%;
+  }
+
+  @media (max-width: 600px) {
+    padding: 0%;
   }
 `;
 

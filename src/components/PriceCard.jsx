@@ -4,8 +4,7 @@ import Button from './Button';
 const StyledPriceCard = styled.div`
   width: 31%;
   background-color: #fff;
-  -webkit-box-shadow: 5px 5px 19px 0px #000000;
-  box-shadow: 5px 5px 19px 0px #000000;
+  box-shadow: 5px 5px 14px 5px rgba(0,0,0,0.29);
   border-radius: 0.5rem;
   padding: 2rem;
   display: flex;

@@ -10,6 +10,10 @@ const Button = styled.button`
   cursor: pointer;
   display: flex;
   align-items: center;
+
+  &:hover {
+    background-color: #0505dd;
+  }
 `;
 
 export default Button;

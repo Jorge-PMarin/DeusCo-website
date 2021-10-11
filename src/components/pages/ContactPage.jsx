@@ -6,7 +6,7 @@ import SendIcon from '../../assets/images/send.png';
 import ContactBackground from '../../assets/images/floor-tile.png';
 
 const Container = styled.section`
-  height: 90vh;
+  min-height: 90vh;
   background-image: url(${ContactBackground});
 `;
 

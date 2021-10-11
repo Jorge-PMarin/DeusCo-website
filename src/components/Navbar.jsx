@@ -49,15 +49,19 @@ const MenuLink = styled.a`
 const Wrapper = styled.div`
   width: 40%;
   text-align: right;
+`;
 
-  button {
-    background-color: crimson;
-    border: 0.2rem solid #fff;
-    font-size: inherit;
-    color: #fff;
-    padding: 0.4em 0.8em;
-    border-radius: 0.5rem;
-    cursor: pointer;
+const Button = styled.button`
+  background-color: crimson;
+  border: 0.2rem solid #fff;
+  font-size: inherit;
+  color: #fff;
+  padding: 0.4em 0.8em;
+  border-radius: 0.5rem;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #d83656;
   }
 `;
 
@@ -68,13 +72,13 @@ const Navbar = () => (
       Deus Co.
     </Logo>
     <Menu>
-      <MenuLink href='#page_features' >features</MenuLink>
+      <MenuLink href='#page_features'>features</MenuLink>
       <MenuLink href='#page_services'>services</MenuLink>
       <MenuLink href='#page_prices'>prices</MenuLink>
       <MenuLink href='#page_contact'>contact</MenuLink>
     </Menu>
     <Wrapper>
-      <button>join today</button>
+      <Button>join today</Button>
     </Wrapper>
   </Nav>
 );

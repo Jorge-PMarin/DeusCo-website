@@ -2,11 +2,15 @@ import styled from 'styled-components';
 import PriceCard from '../PriceCard';
 
 const Container = styled.section`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   position: relative;
+
+  @media (max-width: 600px) {
+    padding: 3rem;
+  }
 `;
 
 const Wrapper = styled.div`
