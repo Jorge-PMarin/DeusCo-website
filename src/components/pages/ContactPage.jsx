@@ -8,6 +8,9 @@ import ContactBackground from '../../assets/images/floor-tile.png';
 const Container = styled.section`
   min-height: 90vh;
   background-image: url(${ContactBackground});
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Wrapper = styled.div`
@@ -36,10 +39,9 @@ const FormContainer = styled.div`
 
     h2 {
       font-size: 3rem;
-      margin: 1em 0 .5em 0;
+      margin: 1em 0 0.5em 0;
     }
   }
-
 `;
 
 const Form = styled.form`
@@ -72,10 +74,9 @@ const FormGroupLeft = styled.div`
   @media (max-width: 840px) {
     width: auto;
     margin-right: auto;
-    
+
     input {
       padding: 1rem;
-
     }
   }
 `;
